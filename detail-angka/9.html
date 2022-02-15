@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mengenal Huruf</title>
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@700&display=swap');
+
+    body {
+        background-image: url("Background.jpg");
+        background-size: 1366px 660px;
+    }
+
+    * {
+        font-family: 'Baloo Bhaijaan 2', cursive;
+    }
+
+    body {
+        background-image: url("../Background.jpg");
+        background-size: 1366px 660px;
+    }
+
+    .navbar-text {
+        font-family: "psans";
+    }
+
+    .item {
+        margin: 15px 30px;
+    }
+
+    p {
+        font-size: 50px;
+        font-family: "psans";
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: rgb(0, 253, 190);
+    }
+
+    .container {
+        background-color: rgba(255, 255, 255, 0.884);
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    .kembali {
+        width: 135px;
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 30px;
+        background-color: rgb(250, 236, 48);
+    }
+
+    #hilangin {
+        display: none;
+    }
+</style>
+
+<body>
+    <button id="hilangin" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Launch demo modal
+    </button>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Halo Saya Guru Belajar Anda</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex">
+                        <div class=""><img src="../gif/guru.gif" alt="" width="200"></div>
+                        <div class="">Halo selamat datang dipengenalan huruf </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="my-4"></div>
+    <div class="d-flex flex-column align-content-center">
+        <div class="container">
+            <div class="d-flex">
+                <!-- Huruf Pertama -->
+                <div class="item" id='item-a'><img src="../image/9.png" alt="" /></div>
+                <div class="mt-4">
+                    <h2>Cara membuat Huruf </h2>
+                    <video width="320" height="240" controls>
+                        <source src="../video/9.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+
+            </div>
+            <a href="../huruf.html">
+                <div class="kembali">
+                    kembali
+                </div>
+            </a>
+        </div>
+</body>
+<!-- audio -->
+<div class="">
+    <audio id="audio-a" controls='controls' hidden='true'>
+        <source src="../audio/9.mp3" controls>
+        </source>
+    </audio>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+<script>
+    $('#hilangin').trigger('click')
+    $(".item").mouseover(function () {
+        $(this).css("cursor", "pointer")
+        $(this).css({
+            "-webkit-transform": "rotate(10deg)",
+            "-moz-transform": "rotate(10deg)",
+            transform: "rotate(10deg)",
+            transisiton: "2ms",
+        })
+    })
+    $(".item").mouseout(function () {
+        $(this).css("cursor", "pointer")
+        $(this).css({
+            "-webkit-transform": "rotate(-2deg)",
+            "-moz-transform": "rotate(-2deg)",
+            transform: "rotate(-2deg)",
+            transisiton: "2ms",
+        })
+    })
+    // audio A
+    $("#item-a").mouseenter(function () {
+        $('#audio-a')[0].play()
+    })
+
+</script>
+
+</html>

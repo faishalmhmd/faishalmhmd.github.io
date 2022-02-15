@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mengenal Huruf</title>
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@700&display=swap');
+
+  * {
+    font-family: 'Baloo Bhaijaan 2', cursive;
+  }
+
+  body {
+    background-image: url("Background.jpg");
+    background-size: 1366px 660px;
+  }
+
+
+  .item {
+    margin: 15px 30px;
+  }
+
+  p {
+    font-family: "psans";
+    text-decoration: none;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(0, 253, 190);
+  }
+
+  .container {
+    background-color: rgba(255, 255, 255, 0.884);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 10px;
+  }
+
+  .back {
+    width: 135px;
+    border-radius: 10px;
+    margin: auto;
+    padding: 10px;
+    font-size: 30px;
+    background-color: rgb(250, 236, 48);
+    border: 2px solid white;
+  }
+
+  .back:hover {
+    background-color: rgb(196, 185, 30);
+  }
+
+  #hilangin {
+    display: none;
+  }
+</style>
+
+<body>
+  <button id="hilangin" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Launch demo modal
+  </button>
+  <div class="my-4"></div>
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Halo Saya Guru Belajar Anda</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="d-flex">
+            <div class=""><img src="gif/guru.gif" alt="" width="200"></div>
+            <div class="">Halo selamat datang silahkan arahkan kursor ke huruf nya </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex flex-column ">
+    <div class="container">
+      <div class="d-flex flex-wrap">
+        <!-- Huruf Pertama -->
+        <a href="detail-angka/1.html">
+          <div class="item" id='item-a'><img src="image/1.png" alt="" /></div>
+        </a>
+        <a href="detail-angka/2.html">
+          <div class="item" id='item-b'><img src="image/2.png" alt="" /></div>
+        </a>
+        <a href="detail-angka/3.html">
+          <div class="item" id='item-c'><img src="image/3.png" alt="" /></div>
+        </a>
+        <a href="detail-angka/4.html">
+          <div class="item" id='item-d'><img src="image/4.png" alt="" /></div>
+        </a>
+        <a href="detail-angka/5.html">
+          <div class="item" id='item-e'><img src="image/5.png" alt="" /></div>
+        </a>
+        <a href="detail-angka/6.html">
+          <div class="item" id='item-f'><img src="image/6.png" alt="" /></div>
+        </a>
+        <a href="detail-angka/7.html">
+          <div class="item" id='item-g'><img src="image/7.png" alt="" /></div>
+        </a>
+        <a href="detail-angka/8.html">
+          <div class="item" id='item-g'><img src="image/8.png" alt="" /></div>
+        </a>
+        <a href="detail-angka/9.html">
+          <div class="item" id='item-g'><img src="image/9.png" alt="" /></div>
+        </a>
+      </div>
+    </div>
+    <a href="index.html">
+      <div class="back">
+        kembali
+      </div>
+    </a>
+  </div>
+</body>
+<!-- audio -->
+<div class="">
+  <audio id="audio-a" controls='controls' hidden='true'>
+    <source src="audio/1.mp3" controls>
+    </source>
+  </audio>
+  <audio id="audio-b" controls='controls' hidden='true'>
+    <source src="audio/2.mp3" controls>
+    </source>
+  </audio>
+  <audio id="audio-c" controls='controls' hidden='true'>
+    <source src="audio/3.mp3" controls>
+    </source>
+  </audio>
+  <audio id="audio-d" controls='controls' hidden='true'>
+    <source src="audio/4.mp3" controls>
+    </source>
+  </audio>
+  <audio id="audio-e" controls='controls' hidden='true'>
+    <source src="audio/5.mp3" controls>
+    </source>
+  </audio>
+  <audio id="audio-f" controls='controls' hidden='true'>
+    <source src="audio/6.mp3" controls>
+    </source>
+  </audio>
+  <audio id="audio-g" controls='controls' hidden='true'>
+    <source src="audio/7.mp3" controls>
+    </source>
+  </audio>
+  <audio id="audio-h" controls='controls' hidden='true'>
+    <source src="audio/8.mp3" controls>
+    </source>
+  </audio>
+  <audio id="audio-i" controls='controls' hidden='true'>
+    <source src="audio/9.mp3" controls>
+    </source>
+  </audio>
+
+</div>
+<div class="buang"></div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script>
+  $(".buang").trigger("click")
+  $("#hilangin").trigger('click')
+
+  $(".item").mouseover(function () {
+    $(this).css("cursor", "pointer")
+    $(this).css({
+      "-webkit-transform": "rotate(10deg)",
+      "-moz-transform": "rotate(10deg)",
+      transform: "rotate(10deg)",
+      transisiton: "2ms",
+    })
+  })
+  $(".item").mouseout(function () {
+    $(this).css("cursor", "pointer")
+    $(this).css({
+      "-webkit-transform": "rotate(-2deg)",
+      "-moz-transform": "rotate(-2deg)",
+      transform: "rotate(-2deg)",
+      transisiton: "2ms",
+    })
+  })
+  // audio A
+  $("#item-a").mouseenter(function () {
+    $('#audio-a')[0].play()
+  })
+  // audio B
+  $("#item-b").mouseenter(function () {
+    $('#audio-b')[0].play()
+  })
+  // audio C
+  $("#item-c").mouseenter(function () {
+    $('#audio-c')[0].play()
+  })
+  // audio D
+  $("#item-d").mouseenter(function () {
+    $('#audio-d')[0].play()
+  })
+  // audio E
+  $("#item-e").mouseenter(function () {
+    $('#audio-e')[0].play()
+  })
+  // audio F
+  $("#item-f").mouseenter(function () {
+    $('#audio-f')[0].play()
+  })
+  // audio G
+  $("#item-g").mouseenter(function () {
+    $('#audio-g')[0].play()
+  })
+  // audio H
+  $("#item-h").mouseenter(function () {
+    $('#audio-h')[0].play()
+  })
+  // audio I
+  $("#item-i").mouseenter(function () {
+    $('#audio-i')[0].play()
+  })
+
+</script>
+
+</html>

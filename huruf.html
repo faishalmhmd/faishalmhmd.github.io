@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mengenal Huruf</title>
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@700&display=swap');
+
+  * {
+    font-family: 'Baloo Bhaijaan 2', cursive;
+  }
+
+  body {
+    background-image: url("Background.jpg");
+    background-size: 1366px 660px;
+  }
+
+
+  .item {
+    margin: 15px 30px;
+  }
+
+  p {
+    font-family: "psans";
+    text-decoration: none;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(0, 253, 190);
+  }
+
+  .container {
+    background-color: rgba(255, 255, 255, 0.884);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 10px;
+  }
+
+  .back {
+    width: 135px;
+    border-radius: 10px;
+    margin: auto;
+    padding: 10px;
+    font-size: 30px;
+    background-color: rgb(250, 236, 48);
+    border: 2px solid white;
+  }
+
+  .back:hover {
+    background-color: rgb(196, 185, 30);
+  }
+
+  #hilangin {
+    display: none;
+  }
+</style>
+
+<body>
+  <button id="hilangin" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Launch demo modal
+  </button>
+  <div class="my-4"></div>
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Halo Saya Guru Belajar Anda</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="d-flex">
+            <div class=""><img src="gif/guru.gif" alt="" width="200"></div>
+            <div class="">Halo selamat datang silahkan arahkan kursor ke huruf nya </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex flex-column ">
+    <div class="container">
+      <div class="d-flex flex-wrap">
+        <!-- Huruf Pertama -->
+        <a href="detail-font/A.html">
+          <div class="item" id='item-a'><img src="image/A-Kapital.png" alt="" /></div>
+        </a>
+        <a href="detail-font/B.html">
+          <div class="item" id='item-b'><img src="image/B-Kapital.png" alt="" /></div>
+        </a>
+        <a href="detail-font/C.html">
+          <div class="item" id='item-c'><img src="image/C-Kapital.png" alt="" /></div>
+        </a>
+        <a href="detail-font/D.html">
+          <div class="item" id='item-d'><img src="image/D-Kapital.png" alt="" /></div>
+        </a>
+        <a href="detail-font/E.html">
+          <div class="item" id='item-e'><img src="image/E-Kapital.png" alt="" /></div>
+        </a>
+        <a href="detail-font/F.html">
+          <div class="item" id='item-f'><img src="image/F-Kapital.png" alt="" /></div>
+        </a>
+        <a href="detail-font/G.html">
+          <div class="item" id='item-g'><img src="image/G-Kapital.png" alt="" /></div>
+        </a>
+      </div>
+      <!-- Huruf Kedua -->
+      <div class="d-flex flex-wrap">
+        <a href="detail-font/H.html">
+          <div class="item" id='item-h'><img src="image/H-Kapital.png" alt="" /></div>
+        </a>
+        <a href="detail-font/I.html">
+          <div class="item" id='item-i'><img src="image/I-Kapital.png" alt="" /></div>
+        </a>
+        <a href="detail-font/J.html">
+          <div class="item" id='item-j'><img src="image/J-Kapital.png" alt="" /></div>
+        </a>
+        <a href="detail-font/K.html">
+          <div class="item" id='item-k'><img src="image/K-Kapital.png" alt="" /></div>
+        </a>
+        <a href="detail-font/L.html">
+          <div class="item" id='item-l'><img src="image/L-Kapital.png" alt="" /></div>
+        </a>
+        <a href="detail-font/M.html">
+          <div class="item" id='item-m'><img src="image/M-Kapital.png" alt="" /></div>
+        </a>
+        <a href="detail-font/N.html">
+          <div class="item" id='item-n'><img src="image/N-Kapital.png" alt="" /></div>
+        </a>
+      </div>
+      <!-- huruf kedua  -->
+      <div class="d-flex flex-wrap">
+        <a href="detail-font/O.html">
+          <div class="item" id='item-o'><img src="image/O-Kapital.png" alt="" /></div>
+        </a>
+        <a href="detail-font/P.html">
+          <div class="item" id='item-p'><img src="image/P-Kapital.png" alt="" /></div>
+        </a>
+        <a href="detail-font/Q.html">
+          <div class="item" id='item-q'><img src="image/Q-Kapital.png" alt="" /></div>
+        </a>
+        <a href="detail-font/R.html">
+          <div class="item" id='item-r'><img src="image/R-Kapital.png" alt="" /></div>
+        </a>
+        <a href="detail-font/S.html">
+          <div class="item" id='item-s'><img src="image/S-Kapital.png" alt="" /></div>
+        </a>
+        <a href="detail-font/T.html">
+          <div class="item" id='item-t'><img src="image/T-Kapital.png" alt="" /></div>
+        </a>
+        <a href="detail-font/U.html">
+          <div class="item" id='item-u'><img src="image/U-Kapital.png" alt="" /></div>
+        </a>
+      </div>
+      <div class="d-flex flex-wrap">
+        <a href="detail-font/V.html">
+          <div class="item" id='item-v'><img src="image/V-Kapital.png" alt="" /></div>
+        </a>
+        <a href="detail-font/W.html">
+          <div class="item" id='item-w'><img src="image/W-Kapital.png" alt="" /></div>
+        </a>
+        <a href="detail-font/X.html">
+          <div class="item" id='item-x'><img src="image/X-Kapital.png" alt="" /></div>
+        </a>
+        <a href="detail-font/Y.html">
+          <div class="item" id='item-y'><img src="image/Y-Kapital.png" alt="" /></div>
+        </a>
+        <a href="detail-font/Z.html">
+          <div class="item" id='item-z'><img src="image/Z-Kapital.png" alt="" /></div>
+        </a>
+      </div>
+    </div>
+    <a href="index.html">
+      <div class="back">
+        kembali
+      </div>
+    </a>
+  </div>
+</body>
+<!-- audio -->
+<div class="">
+  <audio id="audio-a" controls='controls' hidden='true'>
+    <source src="audio/A.mp3" controls>
+    </source>
+  </audio>
+  <audio id="audio-b" controls='controls' hidden='true'>
+    <source src="audio/B.mp3" controls>
+    </source>
+  </audio>
+  <audio id="audio-c" controls='controls' hidden='true'>
+    <source src="audio/C.mp3" controls>
+    </source>
+  </audio>
+  <audio id="audio-d" controls='controls' hidden='true'>
+    <source src="audio/D.mp3" controls>
+    </source>
+  </audio>
+  <audio id="audio-e" controls='controls' hidden='true'>
+    <source src="audio/E.mp3" controls>
+    </source>
+  </audio>
+  <audio id="audio-f" controls='controls' hidden='true'>
+    <source src="audio/F.mp3" controls>
+    </source>
+  </audio>
+  <audio id="audio-g" controls='controls' hidden='true'>
+    <source src="audio/G.mp3" controls>
+    </source>
+  </audio>
+  <audio id="audio-h" controls='controls' hidden='true'>
+    <source src="audio/H.mp3" controls>
+    </source>
+  </audio>
+  <audio id="audio-i" controls='controls' hidden='true'>
+    <source src="audio/I.mp3" controls>
+    </source>
+  </audio>
+  <audio id="audio-j" controls='controls' hidden='true'>
+    <source src="audio/J.mp3" controls>
+    </source>
+  </audio>
+  <audio id="audio-k" controls='controls' hidden='true'>
+    <source src="audio/K.mp3" controls>
+    </source>
+  </audio>
+  <audio id="audio-l" controls='controls' hidden='true'>
+    <source src="audio/L.mp3" controls>
+    </source>
+  </audio>
+  <audio id="audio-m" controls='controls' hidden='true'>
+    <source src="audio/M.mp3" controls>
+    </source>
+  </audio>
+  <audio id="audio-n" controls='controls' hidden='true'>
+    <source src="audio/N.mp3" controls>
+    </source>
+  </audio>
+  <audio id="audio-o" controls='controls' hidden='true'>
+    <source src="audio/O.mp3" controls>
+    </source>
+  </audio>
+  <audio id="audio-p" controls='controls' hidden='true'>
+    <source src="audio/P.mp3" controls>
+    </source>
+  </audio>
+  <audio id="audio-q" controls='controls' hidden='true'>
+    <source src="audio/Q.mp3" controls>
+    </source>
+  </audio>
+  <audio id="audio-r" controls='controls' hidden='true'>
+    <source src="audio/R.mp3" controls>
+    </source>
+  </audio>
+  <audio id="audio-s" controls='controls' hidden='true'>
+    <source src="audio/S.mp3" controls>
+    </source>
+  </audio>
+  <audio id="audio-t" controls='controls' hidden='true'>
+    <source src="audio/T.mp3" controls>
+    </source>
+  </audio>
+  <audio id="audio-u" controls='controls' hidden='true'>
+    <source src="audio/U.mp3" controls>
+    </source>
+  </audio>
+  <audio id="audio-v" controls='controls' hidden='true'>
+    <source src="audio/V.mp3" controls>
+    </source>
+  </audio>
+  <audio id="audio-w" controls='controls' hidden='true'>
+    <source src="audio/W.mp3" controls>
+    </source>
+  </audio>
+  <audio id="audio-x" controls='controls' hidden='true'>
+    <source src="audio/X.mp3" controls>
+    </source>
+  </audio>
+  <audio id="audio-y" controls='controls' hidden='true'>
+    <source src="audio/Y.mp3" controls>
+    </source>
+  </audio>
+  <audio id="audio-z" hidden='true'>
+    <source src="audio/Z.mp3" allow="autoplay">
+    </source>
+  </audio>
+</div>
+<div class="buang"></div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script>
+  $(".buang").trigger("click")
+  $("#hilangin").trigger('click')
+
+  $(".item").mouseover(function () {
+    $(this).css("cursor", "pointer")
+    $(this).css({
+      "-webkit-transform": "rotate(10deg)",
+      "-moz-transform": "rotate(10deg)",
+      transform: "rotate(10deg)",
+      transisiton: "2ms",
+    })
+  })
+  $(".item").mouseout(function () {
+    $(this).css("cursor", "pointer")
+    $(this).css({
+      "-webkit-transform": "rotate(-2deg)",
+      "-moz-transform": "rotate(-2deg)",
+      transform: "rotate(-2deg)",
+      transisiton: "2ms",
+    })
+  })
+  // audio A
+  $("#item-a").mouseenter(function () {
+    $('#audio-a')[0].play()
+  })
+  // audio B
+  $("#item-b").mouseenter(function () {
+    $('#audio-b')[0].play()
+  })
+  // audio C
+  $("#item-c").mouseenter(function () {
+    $('#audio-c')[0].play()
+  })
+  // audio D
+  $("#item-d").mouseenter(function () {
+    $('#audio-d')[0].play()
+  })
+  // audio E
+  $("#item-e").mouseenter(function () {
+    $('#audio-e')[0].play()
+  })
+  // audio F
+  $("#item-f").mouseenter(function () {
+    $('#audio-f')[0].play()
+  })
+  // audio G
+  $("#item-g").mouseenter(function () {
+    $('#audio-g')[0].play()
+  })
+  // audio H
+  $("#item-h").mouseenter(function () {
+    $('#audio-h')[0].play()
+  })
+  // audio I
+  $("#item-i").mouseenter(function () {
+    $('#audio-i')[0].play()
+  })
+  // audio J
+  $("#item-j").mouseenter(function () {
+    $('#audio-j')[0].play()
+  })
+  // audio K
+  $("#item-k").mouseenter(function () {
+    $('#audio-k')[0].play()
+  })
+  // audio L
+  $("#item-l").mouseenter(function () {
+    $('#audio-l')[0].play()
+  })
+  // audio M
+  $("#item-m").mouseenter(function () {
+    $('#audio-m')[0].play()
+  })
+  // audio N
+  $("#item-n").mouseenter(function () {
+    $('#audio-n')[0].play()
+  })
+  // audio O
+  $("#item-o").mouseenter(function () {
+    $('#audio-o')[0].play()
+  })
+  // audio P
+  $("#item-p").mouseenter(function () {
+    $('#audio-p')[0].play()
+  })
+  // audio Q
+  $("#item-q").mouseenter(function () {
+    $('#audio-q')[0].play()
+  })
+  // audio R
+  $("#item-r").mouseenter(function () {
+    $('#audio-r')[0].play()
+  })
+  // audio S
+  $("#item-s").mouseenter(function () {
+    $('#audio-s')[0].play()
+  })
+  // audio T
+  $("#item-t").mouseenter(function () {
+    $('#audio-t')[0].play()
+  })
+  // audio U
+  $("#item-u").mouseenter(function () {
+    $('#audio-u')[0].play()
+  })
+  // audio V
+  $("#item-v").mouseenter(function () {
+    $('#audio-v')[0].play()
+  })
+  // audio W
+  $("#item-w").mouseenter(function () {
+    $('#audio-w')[0].play()
+  })
+  // audio X
+  $("#item-x").mouseenter(function () {
+    $('#audio-x')[0].play()
+  })
+  // audio Y
+  $("#item-y").mouseenter(function () {
+    $('#audio-y')[0].play()
+  })
+  // audio Z
+  $("#item-z").mouseenter(function () {
+    $('#audio-z')[0].play()
+  })
+
+</script>
+
+</html>
