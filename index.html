@@ -12,13 +12,35 @@
         }
         .hide-scrollbar {
             overflow: auto;
-            scrollbar-width: none;       /* Firefox */
-            -ms-overflow-style: none;    /* Internet Explorer 10+ */
+            scrollbar-width: none;       
+            -ms-overflow-style: none;    
         }
 
         .hide-scrollbar::-webkit-scrollbar {
-            display: none;               /* WebKit browsers (Chrome, Safari) */
+            display: none;               
         }
+
+        .powerline-badge {
+            position: relative;
+            background: var(--badge-color, #333); /* fallback color */
+            color: white;
+            padding: 5px 15px 5px 10px;
+            display: inline-block;
+            margin-right: 15px;
+            clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 0 100%);
+            }
+
+        .powerline-badge::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -15px;
+            width: 0;
+            height: 0;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            border-left: 15px solid var(--badge-color, #333);
+            }
     </style>
 </head>
 
@@ -44,11 +66,10 @@
                             <br>
                             <div class="text-[10px]">02/2025 - 05/2025</div>
                         </div>
-                        <div class="">
+                        <div class="powerline-badge" style="--badge-color: #8d0d0d;">
                             Javascript Developer
                         </div>
                     </div>
-                    
                     <div class=""></div>
                     <div class="grid grid-cols-[2fr_98fr] gap-1">
                         <div class="">-</div>
@@ -75,7 +96,7 @@
                             <br>
                             <div class="text-[10px]">01/2023 - 02/2025</div>
                         </div>
-                        <div class="">
+                        <div class="powerline-badge" style="--badge-color: #61b617;">
                             Junior Programmer
                         </div>
                     </div>
@@ -121,7 +142,7 @@
                             <br>
                             <div class="text-[10px]">10/2022 - 01/2023</div>
                         </div>
-                        <div class="">
+                        <div class="powerline-badge" style="--badge-color: #61b617;">
                             Probation Officer
                         </div>
                     </div>
@@ -152,7 +173,7 @@
                             <br>
                             <div class="text-[10px]">06/2022 - 09/2022</div>
                         </div>
-                        <div class="">
+                        <div class="powerline-badge" style="--badge-color: #fff508; color:black">
                             Assistant Lecture
                         </div>
                     </div>
@@ -193,7 +214,7 @@
                             <br>
                             <div class="text-[10px]">09/2021 - 10/2021</div>
                         </div>
-                        <div class="">
+                        <div class="powerline-badge" style="--badge-color: #4d0f74;">
                             Intern Developer
                         </div>
                     </div>
@@ -213,7 +234,7 @@
                             <br>
                             <div class="text-[10px]">09/2021 - 10/2021</div>
                         </div>
-                        <div class="" style="background:white; color:black;">
+                        <div class="powerline-badge" style="--badge-color: #FFFFFF; color: black;">
                             Intern Technician
                         </div>
                     </div>
