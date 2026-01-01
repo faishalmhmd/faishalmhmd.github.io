@@ -1,73 +1,429 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Muhamad Faishal Azizi" />
-    <title>faishalmhmd.dev</title>
-    <style>
-      body {
-        text-align: center;
-        background: #000;
-        color: #fff;
-        font-family: monospace;
-      }
-      img {
-        height: 300px;
-        width: 300px;
-        object-fit: cover;
-        border-radius: 12px;
-        margin-top: 20px;
-      }
-      #overlay {
-        position: fixed;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.8);
-        color: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 1.2rem;
-        cursor: pointer;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="overlay">Click anywhere to enter</div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muhamad Faishal Azizi - CV</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    * {
+      font-family: 'Courier New', Courier, monospace;
+    }
+  </style>
+</head>
+<body class="bg-black">
 
-    <audio id="player" preload="auto">
-      <source src="letithappen.mp3" type="audio/mpeg">
-    </audio>
+  <div class="max-w-xl mx-auto text-gray-200">
 
-    <img src="/heisenberg.jpeg" alt="Heisenberg" />
-    <br />
-    You Got Me!
+    <!-- Header -->
+    <header class="pb-6 mb-6">
+      <h1 class="text-3xl font-bold text-gray-100">Muhamad Faishal Azizi</h1>
+      <p class="text-gray-400">Web Developer</p>
 
-    <script>
-      const audio = document.getElementById('player');
-      const overlay = document.getElementById('overlay');
+      <div class="mt-4 text-sm space-y-1 text-gray-400">
+        <p>West Bandung, Padalarang</p>
+        <p>08972773335</p>
+        <p>
+          <a href="mailto:faishalmhmd4@gmail.com" class="hover:text-gray-200">
+            faishalmhmd4@gmail.com
+          </a>
+        </p>
+      </div>
+    </header>
 
-      const startTime = 6 * 60 + 15.5;
+    <!-- Summary -->
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold  mb-3">
+        Summary
+      </h2>
+      <p class="text-sm leading-relaxed text-gray-300">
+        Detail-oriented Front-End Developer with 3 years of experience in developing
+        interactive web applications. Skilled in Node.js, React, Vue, Tailwind,
+        HTML5, and CSS3. Known for writing clean, maintainable code and improving
+        site performance.
+      </p>
+    </section>
 
-      overlay.addEventListener('click', async () => {
-        overlay.remove(); // remove overlay
+    <!-- Experience -->
+<section class="mb-8">
+  <h2 class="text-xl font-semibold mb-4">
+    Experience
+  </h2>
 
-        await audio.play(); // user gesture -> allowed
-        audio.currentTime = startTime;
+  <div class="space-y-6 text-sm text-gray-300">
 
-        // optional fade in
-        audio.volume = 0;
-        const fade = setInterval(() => {
-          if (audio.volume < 1) {
-            audio.volume = Math.min(audio.volume + 0.05, 1);
-          } else {
-            clearInterval(fade);
-          }
-        }, 200);
-      });
-      console.log("%cHey there! 👋", "color: #00ffff; font-size: 16px;");
-      console.log("%cWant to check my CV? Download it here:", "color: #fff; font-size: 14px;");
-      console.log("%c👉 https://faishalmhmd.dev/cv.pdf", "color: #00ff00; font-size: 14px; text-decoration: underline;");
-    </script>
-  </body>
+    <!-- PT DayaGuna Motor Indonesia -->
+    <div>
+      <p class="font-semibold text-gray-200">
+        Front End Developer
+      </p>
+      <p class="text-gray-400">PT DayaGuna Motor Indonesia</p>
+      <p class="text-gray-500">08/2025 – Present</p>
+      <ul class="list-disc list-inside mt-1 text-gray-400">
+        <li>Develop web applications using TypeScript and Nuxt.js / Vue 3</li>
+        <li>Integrate RESTful APIs</li>
+        <li>Develop CMS using React</li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="font-semibold text-gray-200">
+        Probation Officer (Front End Developer)
+      </p>
+      <p class="text-gray-400">PT DayaGuna Motor Indonesia</p>
+      <p class="text-gray-500">05/2025 – 08/2025</p>
+      <ul class="list-disc list-inside mt-1 text-gray-400">
+        <li>Develop web applications using TypeScript and Nuxt.js / Vue 3</li>
+        <li>Integrate RESTful APIs</li>
+      </ul>
+    </div>
+
+    <!-- PT Intersolusi Teknologi Asia -->
+    <div>
+      <p class="font-semibold text-gray-200">
+        JavaScript Developer
+      </p>
+      <p class="text-gray-400">PT Intersolusi Teknologi Asia</p>
+      <p class="text-gray-500">02/2025 – 05/2025</p>
+      <ul class="list-disc list-inside mt-1 text-gray-400">
+        <li>Develop web applications using TypeScript, Nuxt.js / Vue 3</li>
+        <li>State management using Pinia</li>
+        <li>Slice Figma designs into responsive UI using Tailwind CSS</li>
+        <li>Integrate RESTful APIs</li>
+      </ul>
+    </div>
+
+    <!-- PT Diantara Intermedia -->
+    <div>
+      <p class="font-semibold text-gray-200">
+        Junior Programmer
+      </p>
+      <p class="text-gray-400">PT Diantara Intermedia</p>
+      <p class="text-gray-500">01/2022 – 02/2025</p>
+      <ul class="list-disc list-inside mt-1 text-gray-400">
+        <li>Develop web applications using Laravel</li>
+        <li>Develop POS and Android applications using React Native</li>
+        <li>Integrate web and mobile apps via REST API</li>
+        <li>Create realtime applications using WebSocket / Pusher</li>
+        <li>Integrate payment gateways (Xendit, SmilePay)</li>
+        <li>Manage VPS, deploy applications to VPS and cPanel hosting</li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="font-semibold text-gray-200">
+        Probation Officer (Junior Programmer)
+      </p>
+      <p class="text-gray-400">PT Diantara Intermedia</p>
+      <p class="text-gray-500">10/2022 – 01/2023</p>
+      <ul class="list-disc list-inside mt-1 text-gray-400">
+        <li>Collaborate with UI/UX designers to implement user interfaces</li>
+        <li>Slice designs into responsive web layouts</li>
+        <li>Develop Android applications using React Native</li>
+      </ul>
+    </div>
+
+    <!-- Academic -->
+    <div>
+      <p class="font-semibold text-gray-200">
+        Assistant Lecturer
+      </p>
+      <p class="text-gray-400">Universitas Komputer Indonesia</p>
+      <p class="text-gray-500">06/2020 – 09/2022</p>
+      <ul class="list-disc list-inside mt-1 text-gray-400">
+        <li>Assist lecturers in teaching and mentoring students</li>
+        <li>Maintain laboratory and technical infrastructure</li>
+        <li>Support and contribute to academic events</li>
+        <li>Contribute to social media content and video editing</li>
+      </ul>
+    </div>
+
+    <!-- Internship -->
+    <div>
+      <p class="font-semibold text-gray-200">
+        Developer (Intern)
+      </p>
+      <p class="text-gray-400">Nibble Softworks</p>
+      <p class="text-gray-500">09/2021 – 10/2021</p>
+      <ul class="list-disc list-inside mt-1 text-gray-400">
+        <li>Create modules to synchronize databases with marketplace APIs</li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="font-semibold text-gray-200">
+        Technician (Intern)
+      </p>
+      <p class="text-gray-400">PT Mabito Karya</p>
+      <p class="text-gray-500">01/2017 – 06/2017</p>
+      <ul class="list-disc list-inside mt-1 text-gray-400">
+        <li>Repair PC and laptop hardware</li>
+        <li>Reinstall and configure Windows OS</li>
+        <li>Disassemble and replace laptop components (LCD, parts)</li>
+        <li>Quality control of laptop components</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- Education -->
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold  mb-4">
+        Education
+      </h2>
+
+      <div class="text-sm space-y-4 text-gray-300">
+        <div>
+          <p class="font-semibold text-gray-200">
+            Bachelor of Informatics Engineering
+          </p>
+          <p class="text-gray-500">
+            Universitas Komputer Indonesia (2018 – 2022)
+          </p>
+          <p class="text-gray-400">GPA: 3.09</p>
+        </div>
+
+        <div>
+          <p class="font-semibold text-gray-200">
+            Computer & Network Engineering
+          </p>
+          <p class="text-gray-500">
+            SMKN 4 Padalarang (2015 – 2018)
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold  mb-4">
+        Skills
+      </h2>
+
+      <ul class="list-disc list-inside text-sm text-gray-400 space-y-1">
+        <li>Vue / Nuxt</li>
+        <li>React</li>
+        <li>React Native</li>
+        <li>Node.js</li>
+        <li>JavaScript</li>
+        <li>PHP</li>
+        <li>Laravel</li>
+        <li>Tailwind</li>
+        <li>Git</li>
+        <li>Linux</li>
+        <li>IoT</li>
+      </ul>
+    </section>
+
+    <!-- Certificates -->
+<section class="mb-8">
+  <h2 class="text-xl font-semibold  mb-4">
+    Certificates
+  </h2>
+
+  <div class="text-sm space-y-4 text-gray-300">
+
+    <div>
+      <p class="font-semibold text-gray-200">Introduction to IoT</p>
+      <p class="text-gray-500">Cisco · 08/2021</p>
+    </div>
+
+    <div>
+      <p class="font-semibold text-gray-200">
+        CCNA: Switching, Routing, and Wireless Essentials
+      </p>
+      <p class="text-gray-500">Cisco · 08/2021</p>
+    </div>
+
+    <div>
+      <p class="font-semibold text-gray-200">
+        CCNA: Introduction to Networks
+      </p>
+      <p class="text-gray-500">Cisco · 02/2021</p>
+    </div>
+
+    <div>
+      <p class="font-semibold text-gray-200">
+        Generate Business Reports with Quick BI
+      </p>
+      <p class="text-gray-500">Alibaba Cloud</p>
+      <p class="text-gray-400 text-xs">
+        Credential ID: ACFD04240600122463
+      </p>
+    </div>
+
+    <div>
+      <p class="font-semibold text-gray-200">
+        Machine Learning Platform Artificial Intelligence
+      </p>
+      <p class="text-gray-500">Alibaba Cloud · 05/2026</p>
+      <p class="text-gray-400 text-xs">
+        Credential ID: CDW1092406001122462
+      </p>
+    </div>
+
+    <div>
+      <p class="font-semibold text-gray-200">
+        Apsara Clouder: Beginner's Guide to MySQL
+      </p>
+      <p class="text-gray-500">Alibaba Cloud · 05/2026</p>
+      <p class="text-gray-400 text-xs">
+        Credential ID: ACFW221240500120231
+      </p>
+    </div>
+
+    <div>
+      <p class="font-semibold text-gray-200">
+        Alibaba Cloud MaxCompute – UDF Development
+      </p>
+      <p class="text-gray-500">Alibaba Cloud · 05/2026</p>
+      <p class="text-gray-400 text-xs">
+        Credential ID: ACFW232140600122465
+      </p>
+    </div>
+
+    <div>
+      <p class="font-semibold text-gray-200">
+        Alibaba Cloud MaxCompute – SQL Development
+      </p>
+      <p class="text-gray-500">Alibaba Cloud · 05/2026</p>
+      <p class="text-gray-400 text-xs">
+        Credential ID: ACFW230240500122330
+      </p>
+    </div>
+
+    <div>
+      <p class="font-semibold text-gray-200">
+        Alibaba Cloud DataWorks – Basic Knowledge
+      </p>
+      <p class="text-gray-500">Alibaba Cloud · 05/2026</p>
+      <p class="text-gray-400 text-xs">
+        Credential ID: ACFW229240500120226
+      </p>
+    </div>
+
+  </div>
+</section>
+<!-- Projects -->
+<section class="mb-8">
+  <h2 class="text-xl font-semibold mb-4">
+    Projects
+  </h2>
+
+  <div class="space-y-5 text-sm text-gray-300">
+
+    <div>
+      <p class="font-semibold text-gray-200">
+        Company Profile – UKM Kampus
+      </p>
+      <p class="text-gray-400">
+        PHP · MySQL · Bootstrap
+      </p>
+      <ul class="list-disc list-inside mt-1 text-gray-400">
+        <li>Designed and developed a company profile website for campus student organizations</li>
+        <li>Implemented dynamic content management using PHP and MySQL</li>
+        <li>Built responsive UI using Bootstrap to support multiple devices</li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="font-semibold text-gray-200">
+        Company Profile – ekososlab.id
+      </p>
+      <p class="text-gray-400">
+        PHP · Laravel · Tailwind CSS
+      </p>
+      <ul class="list-disc list-inside mt-1 text-gray-400">
+        <li>Developed a corporate website to represent company branding and services</li>
+        <li>Implemented MVC architecture using Laravel</li>
+        <li>Built clean and responsive UI using Tailwind CSS</li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="font-semibold text-gray-200">
+        Medical Record System
+      </p>
+      <p class="text-gray-400">
+        PHP · MySQL
+      </p>
+      <ul class="list-disc list-inside mt-1 text-gray-400">
+        <li>Developed a medical record management system for patient data</li>
+        <li>Implemented CRUD features for patient, examination, and treatment records</li>
+        <li>Ensured data consistency and structured relational database design</li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="font-semibold text-gray-200">
+        E-Ticketing System
+      </p>
+      <p class="text-gray-400">
+        Express.js · Vue · Tailwind CSS · Prisma · PostgreSQL
+      </p>
+      <ul class="list-disc list-inside mt-1 text-gray-400">
+        <li>Developed an end-to-end e-ticketing system for event management</li>
+        <li>Built RESTful API using Express.js and Prisma ORM with PostgreSQL</li>
+        <li>Implemented frontend using Vue and Tailwind CSS</li>
+        <li>Set up CI/CD pipeline using GitHub Actions for automated deployment</li>
+        <li>Integrated system notifications to Discord for deployment and system events</li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="font-semibold text-gray-200">
+        IoT Monitoring System – Dinas Pangan dan Pertanian Cimahi
+      </p>
+      <p class="text-gray-400">
+        Express.js · MQTT Broker · PostgreSQL · Tailwind CSS
+      </p>
+      <ul class="list-disc list-inside mt-1 text-gray-400">
+        <li>Developed a real-time IoT monitoring system for government agriculture services</li>
+        <li>Integrated sensor data using MQTT broker and stored data in PostgreSQL</li>
+        <li>Built monitoring dashboard for data visualization and reporting</li>
+        <li>Implemented CI/CD using GitHub Actions for reliable deployment</li>
+        <li>Integrated Discord notifications for system status and deployment alerts</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Journal -->
+<section class="mb-8">
+  <h2 class="text-xl font-semibold  mb-4">
+    Journal
+  </h2>
+
+  <div class="text-sm text-gray-300 space-y-2">
+    <p class="font-semibold text-gray-200">
+      Scientific Journal – ISCoE 2024 (Taylor’s University)
+    </p>
+    <p class="text-gray-400">
+      Published in Special Issue ISCoE 2024
+    </p>
+    <a
+      href="https://jestec.taylors.edu.my/Special%20Issue%20ISCoE%202024_3/ISCoE2024_3_07.pdf"
+      target="_blank"
+      class="text-gray-400 underline hover:text-gray-200 text-sm"
+    >
+      View Publication (PDF)
+    </a>
+  </div>
+</section>
+
+    <!-- Languages -->
+    <section>
+      <h2 class="text-xl font-semibold  mb-4">
+        Languages
+      </h2>
+      <p class="text-sm text-gray-400">English, Indonesian</p>
+    </section>
+
+  </div>
+
+</body>
 </html>
