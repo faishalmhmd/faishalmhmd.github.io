@@ -9,12 +9,72 @@
     * {
       font-family: 'Courier New', Courier, monospace;
     }
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  .print-hidden {
+    display: none !important;
+  }
+
+  .print-container {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: black !important;
+  }
+
+  h1, h2, p, li {
+    color: black !important;
+  }
+
+  a {
+    color: black !important;
+    text-decoration: none !important;
+  }
+
+  ul {
+    padding-left: 1rem;
+  }
+
+  /* SECTION BOLEH TERPOTONG */
+  section {
+    page-break-inside: auto;
+  }
+
+  /* JANGAN POTONG ITEM PENTING */
+  h2,
+  li,
+  p {
+    page-break-inside: avoid;
+  }
+
+  /* KHUSUS YANG MAU TETAP UTUH */
+  .no-break {
+    page-break-inside: avoid;
+  }
+
+  @page {
+    size: A4;
+    margin: 20mm;
+  }
+}
+
   </style>
 </head>
 <body class="bg-black">
 
-  <div class="max-w-xl mx-auto text-gray-200">
-
+  <div class="max-w-xl mx-auto text-gray-200 print-container sm:p-0 p-5">
+    <div class="print-hidden max-w-xl mx-auto mb-4 flex justify-end">
+  <button
+    onclick="window.print()"
+    class="px-4 py-2 text-sm bg-gray-800 text-gray-200 border border-gray-700 hover:bg-gray-700"
+  >
+    Print PDF
+  </button>
+</div>
     <!-- Header -->
     <header class="pb-6 mb-6">
       <h1 class="text-3xl font-bold text-gray-100">Muhamad Faishal Azizi</h1>
@@ -46,7 +106,7 @@
 
     <!-- Experience -->
 <section class="mb-8">
-  <h2 class="text-xl font-semibold mb-4">
+  <h2 class="text-xl font-semibold mb-4 no-break">
     Experience
   </h2>
 
@@ -170,7 +230,7 @@
 
     <!-- Education -->
     <section class="mb-8">
-      <h2 class="text-xl font-semibold  mb-4">
+      <h2 class="text-xl font-semibold  mb-4 no-break">
         Education
       </h2>
 
@@ -198,7 +258,7 @@
 
     <!-- Skills -->
     <section class="mb-8">
-      <h2 class="text-xl font-semibold  mb-4">
+      <h2 class="text-xl font-semibold  mb-4 no-break">
         Skills
       </h2>
 
@@ -219,7 +279,7 @@
 
     <!-- Certificates -->
 <section class="mb-8">
-  <h2 class="text-xl font-semibold  mb-4">
+  <h2 class="text-xl font-semibold  mb-4 no-break">
     Certificates
   </h2>
 
@@ -308,7 +368,7 @@
 </section>
 <!-- Projects -->
 <section class="mb-8">
-  <h2 class="text-xl font-semibold mb-4">
+  <h2 class="text-xl font-semibold mb-4 no-break">
     Projects
   </h2>
 
@@ -394,7 +454,7 @@
 
 <!-- Journal -->
 <section class="mb-8">
-  <h2 class="text-xl font-semibold  mb-4">
+  <h2 class="text-xl font-semibold  mb-4 no-break">
     Journal
   </h2>
 
@@ -417,7 +477,7 @@
 
     <!-- Languages -->
     <section>
-      <h2 class="text-xl font-semibold  mb-4">
+      <h2 class="text-xl font-semibold  mb-4 no-break">
         Languages
       </h2>
       <p class="text-sm text-gray-400">English, Indonesian</p>
