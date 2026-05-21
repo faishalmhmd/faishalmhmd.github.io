@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html-root">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,6 +9,21 @@
     * {
       font-family: 'Courier New', Courier, monospace;
     }
+
+    /* Light mode styles */
+    body.light-mode {
+      background-color: #ffffff !important;
+      color: #111827 !important;
+    }
+    body.light-mode .text-gray-100 { color: #111827 !important; }
+    body.light-mode .text-gray-200 { color: #1f2937 !important; }
+    body.light-mode .text-gray-300 { color: #374151 !important; }
+    body.light-mode .text-gray-400 { color: #4b5563 !important; }
+    body.light-mode .text-gray-500 { color: #6b7280 !important; }
+    body.light-mode .bg-gray-800  { background-color: #e5e7eb !important; }
+    body.light-mode .border-gray-700 { border-color: #d1d5db !important; }
+    body.light-mode .hover\:bg-gray-700:hover { background-color: #d1d5db !important; }
+
 @media print {
   body {
     background: white !important;
@@ -67,7 +82,14 @@
 <body class="bg-black">
 
   <div class="max-w-xl mx-auto text-gray-200 print-container sm:p-0 p-5">
-    <div class="print-hidden max-w-xl mx-auto mb-4 flex justify-end">
+    <div class="print-hidden max-w-xl mx-auto mb-4 flex justify-end gap-2">
+  <button
+    id="theme-toggle"
+    onclick="toggleTheme()"
+    class="px-4 py-2 text-sm bg-gray-800 text-gray-200 border border-gray-700 hover:bg-gray-700"
+  >
+    Light Mode
+  </button>
   <button
     onclick="window.print()"
     class="px-4 py-2 text-sm bg-gray-800 text-gray-200 border border-gray-700 hover:bg-gray-700"
@@ -82,7 +104,6 @@
 
       <div class="mt-4 text-sm space-y-1 text-gray-400">
         <p>West Bandung, Padalarang</p>
-        <p>08972773335</p>
         <p>
           <a href="mailto:faishalmhmd4@gmail.com" class="hover:text-gray-200">
             faishalmhmd4@gmail.com
@@ -234,7 +255,7 @@
         Education
       </h2>
 
-      <div class="text-sm space-y-4 text-gray-300">
+      <div class="text-sm space-y-6 text-gray-300">
         <div>
           <p class="font-semibold text-gray-200">
             Bachelor of Informatics Engineering
@@ -243,15 +264,33 @@
             Universitas Komputer Indonesia (2018 – 2022)
           </p>
           <p class="text-gray-400">GPA: 3.09</p>
+          <p class="text-gray-500 mt-2">Final Project:</p>
+          <a href="#journal" class="text-gray-300 hover:text-gray-100 underline underline-offset-2 transition-colors">
+            Data Security System in the MQTT Protocol Using Elliptic Curve Diffie-Hellman and Advanced Encryption Standard
+          </a>
+          <ul class="list-disc list-inside mt-1 text-gray-400">
+            <li>Develop security on MQTT communication protocol</li>
+            <li>Applied ECDH key exchange for IoT devices</li>
+            <li>Encrypted payload data using AES</li>
+            <li>Evaluated system performance</li>
+          </ul>
         </div>
 
         <div>
           <p class="font-semibold text-gray-200">
-            Computer & Network Engineering
+            Computer &amp; Network Engineering
           </p>
           <p class="text-gray-500">
             SMKN 4 Padalarang (2015 – 2018)
           </p>
+          <p class="text-gray-500 mt-2">Final Project (Ujian Kompetensi):</p>
+          <p class="text-gray-300">Dual Boot PC Installation &amp; Mikrotik Network Configuration</p>
+          <ul class="list-disc list-inside mt-1 text-gray-400">
+            <li>Installed and configured a dual boot system (Windows &amp; Linux)</li>
+            <li>Set up bootloader and partitioned disk for multi-OS coexistence</li>
+            <li>Configured Mikrotik including routing, DHCP, and firewall rules</li>
+            <li>Demonstrated network topology setup as part of the vocational competency exam</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -431,22 +470,7 @@
         <li>Integrated system notifications to Discord for deployment and system events</li>
       </ul>
     </div>
-    <div>
-  <p class="font-semibold text-gray-200">
-    Stock Market Scraping & Analysis Bot
-  </p>
-  <p class="text-gray-400">
-    JavaScript · Node.js · Web Scraping · Technical Analysis · Telegram Bot
-  </p>
-  <ul class="list-disc list-inside mt-1 text-gray-400">
-    <li>Built an automated bot to scrape Indonesian stock market data from multiple sources (e.g. Yahoo Finance, TradingView, IDX)</li>
-    <li>Processed and analyzed market data using technical indicators such as MA, RSI, MACD, and volume</li>
-    <li>Generated up to 10 selected stock signals (emiten) per analysis cycle based on predefined trading criteria</li>
-    <li>Implemented scheduled analysis after market close to prepare signals for the next trading day</li>
-    <li>Integrated Telegram Bot API to automatically send analysis results and trading signals to a Telegram group</li>
-    <li>Configured bot deployment and environment variables for secure token management and stable execution</li>
-  </ul>
-</div>
+
     <div>
       <p class="font-semibold text-gray-200">
         IoT Monitoring System – Dinas Pangan dan Pertanian Cimahi
@@ -463,12 +487,14 @@
       </ul>
     </div>
 
+
+
   </div>
 </section>
 
 
 <!-- Journal -->
-<section class="mb-8">
+<section id="journal" class="mb-8">
   <h2 class="text-xl font-semibold  mb-4 no-break">
     Journal
   </h2>
@@ -499,6 +525,15 @@
     </section>
 
   </div>
+
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const btn = document.getElementById('theme-toggle');
+      const isLight = body.classList.toggle('light-mode');
+      btn.textContent = isLight ? 'Dark Mode' : 'Light Mode';
+    }
+  </script>
 
 </body>
 </html>
